@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+
+
+<!-- Nav -->
+
+{% for item in data %}
+<div class="p-2">
+    <tr>
+        <div class="card border-primary mb-3" style="max-width: 100rem;">
+            <div class="card-header">{{item[6]}}</div>
+
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-10">
+                        <h3 class="card-title">{{item[0]}}</h3>
+                        <h4>${{item[1]}}</h4>
+                        <p>Shop Name: {{item[2]}}</p>
+                        <p>Shop Address: {{item[3]}}</p>
+                        <p>Shop Email Address: {{item[4]}}</p>
+                        <p>Shop Phone Humber: {{item[5]}}</p>
+                    </div>
+                    <div class="col-2">
+                        <img src={{item[7]}} class="thumbnail" alt="No Photo Provided" width="80%" height=auto>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    <br>
+    </tr>
+</div>
+{% endfor %}
+
+
+{% endblock %}
